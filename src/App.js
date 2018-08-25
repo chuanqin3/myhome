@@ -6,6 +6,7 @@ import NavBar from './NavBar'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './Home'
 import Bio from './Bio'
+import Projects from './Projects'
 
 class App extends Component {
   render() {
@@ -26,7 +27,7 @@ class App extends Component {
             </div>
             <Route exact path='/' component={Home}/>
             <Route exact path='/bio' component={Bio}/>
-            {/* <Route exact path='/projects' component={Projects}/> */}
+            <Route exact path='/projects' component={Projects}/>
           </div>
         </Router>
       </div>

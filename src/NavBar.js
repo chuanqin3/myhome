@@ -23,14 +23,16 @@ export default class NavBar extends Component {
             as={Link}
             to='bio'
             position='center'
-            name='messages'
-            active={activeItem === 'messages'}
+            name='bio'
+            active={activeItem === 'bio'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
+            as={Link}
+            to='projects'
             position='left'
-            name='friends'
-            active={activeItem === 'friends'}
+            name='projects'
+            active={activeItem === 'projects'}
             onClick={this.handleItemClick}
           />
         </Menu>
