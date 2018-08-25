@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
+import { Divider } from 'semantic-ui-react'
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Home from './Home'
+import Bio from './Bio'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">CQ Fullstack</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div class="ui vertical center aligned segment">
+        <div class="ui text container">
+          <h1 class="ui header">
+            Chuan Qin
+          </h1>
+          <h2>
+            Fullstack Financial Analyst
+          </h2>
+        </div>
+        <Router>
+          <div>
+            <div class="ui center aligned">
+              <NavBar />
+            </div>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/bio' component={Bio}/>
+            {/* <Route exact path='/projects' component={Projects}/> */}
+          </div>
+        </Router>
       </div>
     );
   }
